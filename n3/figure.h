@@ -1,23 +1,23 @@
 #pragma once
 
 class figure {
-private:
+	private:
 
-	float x1, x2, x3, x4, y1, y2, y3, y4, S, P;
+		float x1, x2, x3, x4, y1, y2, y3, y4, S, P;
 
-public:
+	public:
 
-	figure(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4);
+		figure(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4);
 
-	void show();
+		void show();
 
-	bool is_prug();
+		bool is_prug();
 
-	bool is_square();
+		bool is_square();
 
-	bool is_romb();
+		bool is_romb();
 
-	bool is_in_circle();
+		bool is_in_circle();
 
-	bool is_out_circle();
+		bool is_out_circle();
 };
