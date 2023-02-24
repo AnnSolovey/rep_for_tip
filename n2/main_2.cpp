@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <cmath>
 #include "circle.h"
 
 using namespace std;
