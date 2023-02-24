@@ -12,6 +12,8 @@ int main() {
 		cin >> r >> x >> y;
 		cout << endl;
 		cout << "Square of the circle: " << circle(r, x, y).square() << endl << endl;
+		
+		cout << "Note: 1 = true = 'yes', 0 = false = 'no'" << endl << endl;
 
 		cout << "Enter a, b and c for a triangle separated by a space: " << endl;
 		cin >> a >> b >> c;
