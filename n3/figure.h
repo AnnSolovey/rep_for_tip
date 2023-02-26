@@ -1,23 +1,27 @@
 #pragma once
 
 class figure {
-	private:
+private:
 
-		float x1, x2, x3, x4, y1, y2, y3, y4, S, P;
+	float x1, x2, x3, x4, y1, y2, y3, y4;
 
-	public:
+	float S, P;
 
-		figure(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4);
+	float a, b, c, d, d1, d2; // Завела переменные для хранения длин сторон (a, b, c, d) и диагоналей (d1, d2). Надеюсь, что так делать не запрещается...
 
-		void show();
+public:
 
-		bool is_prug();
+	figure(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4);
 
-		bool is_square();
+	void show();
 
-		bool is_romb();
+	bool is_prug();
 
-		bool is_in_circle();
+	bool is_square();
 
-		bool is_out_circle();
+	bool is_romb();
+
+	bool is_in_circle();
+
+	bool is_out_circle();
 };
