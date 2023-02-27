@@ -16,7 +16,7 @@ figure::figure(float x1, float x2, float x3, float x4, float y1, float y2, float
 }
 
 void figure::show() {
-	cout << "1st vertex: (" << x1 << ", " << y1 << ")" << endl; // ќчень странно вывод€тс€ координаты вершин. ¬еро€тнее всего, это происходит из-за типа данных float.
+	cout << "1st vertex: (" << x1 << ", " << y1 << ")" << endl;
 	cout << "2nd vertex: (" << x2 << ", " << y2 << ")" << endl;
 	cout << "3rd vertex: (" << x3 << ", " << y3 << ")" << endl;
 	cout << "4th vertex: (" << x4 << ", " << y4 << ")" << endl << endl;
