@@ -57,7 +57,7 @@ double eq2::get3() {
     return c;
 }
 
-eq2 operator+ (eq2& e1, eq2& e2) {
+eq2 operator+ (eq2 &e1, eq2 &e2) {
     eq2 sum;
     sum.set(e1.get1() + e2.get1(), e1.get2() + e2.get2(), e1.get3() + e2.get3());
     return sum;
