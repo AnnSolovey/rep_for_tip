@@ -5,8 +5,6 @@ class eq2 {
 
         double a, b, c, D;
 
-        friend eq2 operator+ (eq2& e1, eq2& e2);
-
     public:
 
         eq2();
@@ -26,4 +24,6 @@ class eq2 {
         double get3();
 
         void show_sum();
+        
+        friend eq2 operator+ (eq2& e1, eq2& e2);
 };
