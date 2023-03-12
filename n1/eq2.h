@@ -25,5 +25,5 @@ class eq2 {
 
         void show_sum();
         
-        friend eq2 operator+ (eq2 &e1, eq2 &e2);
+        friend eq2 operator + (eq2 &e1, eq2 &e2);
 };
