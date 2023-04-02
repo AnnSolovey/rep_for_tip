@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class trunc_cone:public cone {
+class trunc_cone : public cone {
 	private:
 		double x0, y0, z0;
 		double r1, r2;
