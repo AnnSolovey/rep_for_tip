@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <ctime>
 #include <cstdlib>
 #include <string>
@@ -8,7 +8,7 @@ using namespace std;
 
 struct contact {
     string name;
-    vector <string> numbers;
+    string numbers;
 };
 
 struct Node {
@@ -36,7 +36,7 @@ Node* addNode(contact* person, Node* tree) {
     else {
         tree->data->numbers.push_back(person->numbers[0]);
     }
-    
+
 
     return tree;
 }
@@ -44,19 +44,27 @@ Node* addNode(contact* person, Node* tree) {
 
 
 void printNode(const string& name, Node* root) {
-    if (name == root->data->name) {
-        cout << root->data->name << endl;
-        for (int i = 0; i < root->data->numbers.size(); i++) {
-            cout << root->data->numbers[i] << endl;
+    while (root->left != nullptr) {
+        if (name == root->data->name) {
+            cout << root->data->numbers << endl;
+            break;
         }
+        root->left = root->left->left;
     }
-    cout << endl;
+
+    while (root->right != nullptr) {
+        if (name == root->data->name) {
+            cout << root->data->numbers << endl;
+            break;
+        }
+        root->left = root->left->right;
+    }
 }
 
 
 
 bool searchNode(const string& name, Node* root) {
-    if (root != NULL) {
+    if (root != nullptr) {
         if (name < root->data->name) {
             searchNode(name, root->left);
         }
@@ -115,8 +123,7 @@ int main() {
     Node* root = nullptr;
 
     bool menu = true;
-    string name, number;
-    vector <string> numbers;
+    string name, numbers;
     int n;
 
     while (menu) {
@@ -127,7 +134,7 @@ int main() {
             cout << "Введите имя: ";
             cin >> name;
             cout << "\nВведите номер(а) в формате +7(999)999-99-99: ";
-            
+            cin >> numbers;
             contact* person = new contact{ name, numbers };
             root = addNode(person, root);
             cout << "Запись добавлена.\n";
@@ -162,7 +169,7 @@ int main() {
             menu = false;
             break;
         }
-        default:{
+        default: {
             cout << "Данная операция не может быть выполнена, повторите попытку!\n";
             break;
         }
