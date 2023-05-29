@@ -3,5 +3,5 @@
 class e_drive {
 	public:
 		int I;
-		void set_Q(int i);
+		void set_Q();
 };
